@@ -1,0 +1,20 @@
+program NEFRON;
+
+uses
+  Forms,
+  UPrincipal in 'UPrincipal.pas' {F_Principal},
+  ufrmCadPadrao in 'ufrmCadPadrao.pas' {frmCadastro},
+  UDM in 'UDM.pas' {F_CadPacientes},
+  UCadPacientes in 'UCadPacientes.pas' {DM: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.Title := 'Ficha Clínica';
+  Application.CreateForm(TF_Principal, F_Principal);
+  Application.CreateForm(TF_CadPacientes, F_CadPacientes);
+  Application.CreateForm(TDM, DM);
+  Application.Run;
+end.

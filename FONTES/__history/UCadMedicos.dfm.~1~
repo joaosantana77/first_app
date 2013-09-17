@@ -1,0 +1,10 @@
+inherited F_CadMed: TF_CadMed
+  Caption = 'Cadastro de M'#233'dicos'
+  ExplicitWidth = 736
+  ExplicitHeight = 437
+  PixelsPerInch = 96
+  TextHeight = 15
+  inherited DBNavigator1: TDBNavigator
+    Hints.Strings = ()
+  end
+end

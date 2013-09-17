@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="4.12.13" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="41518,8786935069" ReportOptions.Description.Text="" ReportOptions.LastChange="41520,4445793287" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C656674023003546F7002380844617461736574730101062C20446174615365743D226672784361645065732220446174615365744E616D653D22667278436164506573220001063620446174615365743D226672784174656E64696D656E746F2220446174615365744E616D653D226672784174656E64696D656E746F220000095661726961626C65730100055374796C650100">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="215,9" PaperHeight="279,4" PaperSize="1" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="105,82684" Left="0" Top="18,89765" Width="740,409927">
+      <TfrxMemoView Name="Memo1" Align="baCenter" Left="294,6143635" Top="79,37013" Width="151,1812" Height="18,89765" ShowHint="False" AutoWidth="True" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Arial" Font.Style="7" ParentFont="False" Text="Ficha Clinica"/>
+      <TfrxPictureView Name="Picture1" Left="18,89765" Top="15,11812" Width="94,48825" Height="52,91342" ShowHint="False" HightQuality="False" Transparent="False" TransparentColor="16777215"/>
+      <TfrxLineView Name="Line2" Left="3,77953" Top="102,04731" Width="737,00835" Height="0" ShowHint="False" Frame.Typ="4"/>
+    </TfrxReportTitle>
+    <TfrxPageHeader Name="PageHeader1" Height="638,74057" Left="0" Top="147,40167" Width="740,409927">
+      <TfrxMemoView Name="Memo2" Left="7,55906" Top="3,77952999999999" Width="49,13389" Height="18,89765" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" ParentFont="False" Text="Nome:"/>
+      <TfrxMemoView Name="frxCadPesNOME" Left="64,25201" Top="3,77952999999999" Width="377,953" Height="18,89765" ShowHint="False" DataField="NOME" DataSet="frxCadPes" DataSetName="frxCadPes" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" ParentFont="False" Text="[frxCadPes.&#34;NOME&#34;]"/>
+      <TfrxMemoView Name="Memo3" Left="457,32313" Top="3,77952999999999" Width="26,45671" Height="18,89765" ShowHint="False" Text="RG:"/>
+      <TfrxMemoView Name="frxCadPesRG" Left="491,3389" Top="3,77952999999999" Width="75,5906" Height="18,89765" ShowHint="False" DataField="RG" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;RG&#34;]"/>
+      <TfrxMemoView Name="Memo4" Left="593,38621" Top="3,77952999999999" Width="45,35436" Height="18,89765" ShowHint="False" Text="Idade:"/>
+      <TfrxMemoView Name="frxCadPesNASCIMENTO" Left="650,07916" Top="3,77952999999999" Width="79,37013" Height="18,89765" ShowHint="False" DataField="NASCIMENTO" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;NASCIMENTO&#34;]"/>
+      <TfrxMemoView Name="Memo5" Left="6,55906" Top="30,23624" Width="68,03154" Height="18,89765" ShowHint="False" Text="Endereço:"/>
+      <TfrxMemoView Name="frxCadPesENDERECO" Left="83,14966" Top="30,23624" Width="589,60668" Height="18,89765" ShowHint="False" DataField="ENDERECO" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;ENDERECO&#34;]"/>
+      <TfrxMemoView Name="frxCadPesBAIRRO" Left="83,14966" Top="52,91342" Width="257,00804" Height="18,89765" ShowHint="False" DataField="BAIRRO" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;BAIRRO&#34;]"/>
+      <TfrxMemoView Name="Memo6" Left="7,55906" Top="53,69295" Width="49,13389" Height="18,89765" ShowHint="False" Text="Bairro:"/>
+      <TfrxMemoView Name="Memo7" Left="351,49629" Top="52,91342" Width="49,13389" Height="18,89765" ShowHint="False" Text="Cidade:"/>
+      <TfrxMemoView Name="frxCadPesCIDADE" Left="404,40971" Top="52,91342" Width="257,00804" Height="18,89765" ShowHint="False" DataField="CIDADE" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;CIDADE&#34;]"/>
+      <TfrxMemoView Name="Memo8" Left="672,75634" Top="52,91342" Width="26,45671" Height="18,89765" ShowHint="False" Text="UF:"/>
+      <TfrxMemoView Name="frxCadPesUF" Left="710,55164" Top="52,91342" Width="15,11812" Height="18,89765" ShowHint="False" DataField="UF" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;UF&#34;]"/>
+      <TfrxMemoView Name="Memo9" Left="7,55906" Top="79,37013" Width="49,13389" Height="18,89765" ShowHint="False" Text="Fone:"/>
+      <TfrxMemoView Name="frxCadPesFONE" Left="83,14966" Top="79,37013" Width="257,00804" Height="18,89765" ShowHint="False" DataField="FONE" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;FONE&#34;]"/>
+      <TfrxMemoView Name="Memo10" Left="351,49629" Top="79,37013" Width="83,14966" Height="18,89765" ShowHint="False" Text="Naturalidade:"/>
+      <TfrxMemoView Name="frxCadPesNATURALIDADE" Left="445,98454" Top="79,37013" Width="279,68522" Height="18,89765" ShowHint="False" DataField="NATURALIDADE" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;NATURALIDADE&#34;]"/>
+      <TfrxMemoView Name="Memo11" Left="7,55906" Top="105,82684" Width="56,69295" Height="18,89765" ShowHint="False" Text="Nascim.:"/>
+      <TfrxMemoView Name="frxCadPesNASCIMENTO1" Left="83,14966" Top="105,82684" Width="120,94496" Height="18,89765" ShowHint="False" DataSet="frxCadPes" DataSetName="frxCadPes" DisplayFormat.FormatStr="mm/dd/yyyy" DisplayFormat.Kind="fkDateTime" Text="[frxCadPes.&#34;NASCIMENTO&#34;]"/>
+      <TfrxMemoView Name="Memo12" Left="291,02381" Top="105,82684" Width="49,13389" Height="18,89765" ShowHint="False" Text="Sexo:"/>
+      <TfrxMemoView Name="frxCadPesSEXO" Left="366,61441" Top="105,82684" Width="7,55906" Height="18,89765" ShowHint="False" DataField="SEXO" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;SEXO&#34;]"/>
+      <TfrxMemoView Name="Memo13" Left="521,57514" Top="105,82684" Width="79,37013" Height="18,89765" ShowHint="False" Text="Estado Civil:"/>
+      <TfrxMemoView Name="frxCadPesESTADOCIVIL" Left="608,50433" Top="105,82684" Width="117,16543" Height="18,89765" ShowHint="False" DataField="ESTADOCIVIL" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;ESTADOCIVIL&#34;]"/>
+      <TfrxMemoView Name="frxAtendimentoHISTORIA" Left="7,55906" Top="264,5671" Width="718,1107" Height="60,47248" ShowHint="False" DataSet="frxAtendimento" DataSetName="frxAtendimento" Frame.ShadowWidth="1" Frame.Typ="15" Frame.LeftLine.Width="2" Frame.RightLine.Width="2" Frame.BottomLine.Width="2" Text="[frxAtendimento.&#34;HISTORIA&#34;]"/>
+      <TfrxMemoView Name="frxAtendimentoANTECEDENTES" Left="7,55906" Top="347,71676" Width="718,1107" Height="37,7953" ShowHint="False" DataField="ANTECEDENTES" DataSet="frxAtendimento" DataSetName="frxAtendimento" Frame.Typ="15" Text="[frxAtendimento.&#34;ANTECEDENTES&#34;]"/>
+      <TfrxMemoView Name="Memo14" Left="7,55906" Top="241,88992" Width="154,96073" Height="18,89765" ShowHint="False" Text="História da doença atual"/>
+      <TfrxMemoView Name="Memo15" Left="10,33859" Top="128,50402" Width="49,13389" Height="18,89765" ShowHint="False" Text="Filiação:"/>
+      <TfrxMemoView Name="frxCadPesFILIACAO" Left="82,72449" Top="128,50402" Width="642,5201" Height="18,89765" ShowHint="False" DataField="FILIACAO" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;FILIACAO&#34;]"/>
+      <TfrxMemoView Name="Memo16" Left="10,33859" Top="151,1812" Width="60,47248" Height="18,89765" ShowHint="False" Text="Profissão:"/>
+      <TfrxMemoView Name="frxCadPesPROFISSAO" Left="83,14966" Top="151,1812" Width="257,00804" Height="18,89765" ShowHint="False" DataField="PROFISSAO" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;PROFISSAO&#34;]"/>
+      <TfrxMemoView Name="Memo17" Left="351,49629" Top="151,1812" Width="71,81107" Height="18,89765" ShowHint="False" Text="Convênio:"/>
+      <TfrxMemoView Name="frxCadPesCONVENIO" Left="445,98454" Top="151,1812" Width="279,68522" Height="18,89765" ShowHint="False" DataField="CONVENIO" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;CONVENIO&#34;]"/>
+      <TfrxMemoView Name="Memo18" Left="7,55906" Top="173,85838" Width="56,69295" Height="18,89765" ShowHint="False" Text="CPF:"/>
+      <TfrxMemoView Name="Memo19" Left="351,49629" Top="173,85838" Width="83,14966" Height="18,89765" ShowHint="False" Text="Emissão RG:"/>
+      <TfrxMemoView Name="frxCadPesCPF" Left="83,14966" Top="173,85838" Width="113,3859" Height="18,89765" ShowHint="False" DataField="CPF" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;CPF&#34;]"/>
+      <TfrxMemoView Name="frxCadPesEMISSAORG" Left="445,98454" Top="173,85838" Width="79,37013" Height="18,89765" ShowHint="False" DataField="EMISSAORG" DataSet="frxCadPes" DataSetName="frxCadPes" Text="[frxCadPes.&#34;EMISSAORG&#34;]"/>
+      <TfrxMemoView Name="Memo20" Left="7,55906" Top="211,65368" Width="83,14966" Height="18,89765" ShowHint="False" Text="Data Atend.:"/>
+      <TfrxMemoView Name="frxAtendimentoDATA" Left="102,04731" Top="211,65368" Width="79,37013" Height="18,89765" ShowHint="False" DataSet="frxAtendimento" DataSetName="frxAtendimento" DisplayFormat.FormatStr="mm/dd/yyyy" DisplayFormat.Kind="fkDateTime" Text="[frxAtendimento.&#34;DATA&#34;]"/>
+      <TfrxMemoView Name="Memo21" Left="192,75603" Top="211,65368" Width="79,37013" Height="18,89765" ShowHint="False" Text="Diagnóstico:"/>
+      <TfrxMemoView Name="frxAtendimentoDIAGNOSTICO1" Left="275,90569" Top="211,65368" Width="449,76407" Height="18,89765" ShowHint="False" DataField="DIAGNOSTICO" DataSet="frxAtendimento" DataSetName="frxAtendimento" Text="[frxAtendimento.&#34;DIAGNOSTICO&#34;]"/>
+      <TfrxLineView Name="Line1" Left="7,55906" Top="230,55133" Width="725,66976" Height="0" ShowHint="False" Frame.Typ="4"/>
+      <TfrxMemoView Name="Memo22" Left="7,55906" Top="325,03958" Width="94,48825" Height="18,89765" ShowHint="False" Text="Antecedentes"/>
+      <TfrxMemoView Name="Memo23" Left="7,55906" Top="396,85065" Width="124,72449" Height="18,89765" ShowHint="False" Text="Exame Físico - PA:"/>
+      <TfrxMemoView Name="frxAtendimentoPA" Left="139,84261" Top="396,85065" Width="56,69295" Height="18,89765" ShowHint="False" DataSet="frxAtendimento" DataSetName="frxAtendimento" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Text="[frxAtendimento.&#34;PA&#34;]"/>
+      <TfrxMemoView Name="Memo24" Left="279,68522" Top="396,85065" Width="30,23624" Height="18,89765" ShowHint="False" Text="FC:"/>
+      <TfrxMemoView Name="frxAtendimentoFC" Left="317,48052" Top="396,85065" Width="56,69295" Height="18,89765" ShowHint="False" DataSet="frxAtendimento" DataSetName="frxAtendimento" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Text="[frxAtendimento.&#34;FC&#34;]"/>
+      <TfrxMemoView Name="Memo25" Left="423,30736" Top="396,85065" Width="49,13389" Height="18,89765" ShowHint="False" Text="PESO:"/>
+      <TfrxMemoView Name="frxAtendimentoPESO" Left="487,55937" Top="396,85065" Width="41,57483" Height="18,89765" ShowHint="False" DataSet="frxAtendimento" DataSetName="frxAtendimento" DisplayFormat.FormatStr="%g" DisplayFormat.Kind="fkNumeric" Text="[frxAtendimento.&#34;PESO&#34;]"/>
+      <TfrxMemoView Name="Memo26" Left="597,16574" Top="396,85065" Width="64,25201" Height="18,89765" ShowHint="False" Text="ALTURA:"/>
+      <TfrxMemoView Name="frxAtendimentoALTURA" Left="676,53587" Top="396,85065" Width="49,13389" Height="18,89765" ShowHint="False" DataSet="frxAtendimento" DataSetName="frxAtendimento" DisplayFormat.FormatStr="%g" DisplayFormat.Kind="fkNumeric" Text="[frxAtendimento.&#34;ALTURA&#34;]"/>
+      <TfrxMemoView Name="Memo27" Left="7,55906" Top="427,08689" Width="94,48825" Height="18,89765" ShowHint="False" Text="Conduta"/>
+      <TfrxMemoView Name="frxAtendimentoCONDUTA" Left="7,55906" Top="445,98454" Width="718,1107" Height="37,7953" ShowHint="False" DataField="CONDUTA" DataSet="frxAtendimento" DataSetName="frxAtendimento" Frame.Typ="15" Text="[frxAtendimento.&#34;CONDUTA&#34;]"/>
+      <TfrxMemoView Name="Memo28" Left="7,55906" Top="498,89796" Width="68,03154" Height="18,89765" ShowHint="False" Text="Evolução"/>
+      <TfrxMemoView Name="frxAtendimentoEVOLUCAO" Left="7,55906" Top="517,79561" Width="718,1107" Height="41,57483" ShowHint="False" DataField="EVOLUCAO" DataSet="frxAtendimento" DataSetName="frxAtendimento" Frame.Typ="15" Text="[frxAtendimento.&#34;EVOLUCAO&#34;]"/>
+      <TfrxSysMemoView Name="SysMemo1" Left="612,28386" Top="604,7248" Width="94,48825" Height="18,89765" ShowHint="False" Text="[DATE]"/>
+    </TfrxPageHeader>
+  </TfrxReportPage>
+</TfrxReport>

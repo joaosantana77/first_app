@@ -1,0 +1,24 @@
+leiame.txt
+------------------------
+Meus Pacientes
+------------------------
+
+Ler esse arquivo (leiame.txt) na pasta do sistema
+
+Cadastro de Médicos e Pacientes
+------------------------------------------------
+O cadastro compreende a inclusão, alteração ou exclusao dos
+dados.
+
+O Atendimento, compreende a entrada de informações do atendimento
+ao paciente, que são gravadas para posterior acompanhamento.
+
+O cadastro do Paciente pode ser realizado na hora do atendimento, mas
+para uma consulta mais rápida é melhor que os pacientes sejam 
+cadastrados antecipadamente.
+
+Espero este programa lhe seja útil.
+Para mudanças e implementações ligar para
+João Araújo - 84-87311255 (OI) ou 84-96278837 (TIM)
+email: programasparaclinicas@gmail.com
+

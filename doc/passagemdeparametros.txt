@@ -1,0 +1,19 @@
+Passagem de parametros
+-- em cima
+  private
+    { Private declarations }
+    Parametro1 : string;
+    Parametro2 : string;
+  public
+    { Public declarations }
+      constructor Create(AOwner : TComponent; pParm1 :string; pParm2 : string);
+  end;
+
+No corpo apos implementation
+Constructor TF_ARecQuitar.Create(AOwner : TComponent; pParm1: string; pParm2 : string);
+begin
+  inherited Create(AOwner);
+  Parametro1 := pParm1;
+  Parametro2 := pParm2;
+end;
+

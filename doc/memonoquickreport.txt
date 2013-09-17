@@ -1,0 +1,79 @@
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+--- criado para imprimir no qr o historico
+procedure TF_QRFicha.TitleBand1BeforePrint(Sender: TQRCustomBand;
+  var PrintBand: Boolean);
+
+var I, cTam, cLin : Integer;
+    vLab : TQRLabel;
+    S : string;
+begin
+    S    := F_Atend.cdsAcompHISTORIA.AsString;
+    I    := 1;
+    cLin := 1;
+    cTam := Length(S);
+    while ((cTam > 0) and (I < 4)) do
+    begin
+       vLab := TQRLabel(FindComponent('QRHist'+IntToStr(i)));
+       With vLab do
+       begin
+         Caption := Copy(S,cLin,60);
+       end;
+       cTam := cTam - 60;
+       cLin := cLin + 60;
+       I    := I + 1;
+    end;
+
+end;
+
+
+procedure TForm1.DetailBand1BeforePrint(Sender: TQRCustomBand;
+ var PrintBand: Boolean);
+var 
+   i: Integer;
+   Memo: TQRMemo;
+begin
+  for i := 1 to 3 do
+  begin
+      Memo := TQRMemo(FindComponent(‘QRMemo’+IntToStr(i)));
+      with Memo.Lines do
+      begin
+              Clear;
+              if not (tbCustomer.EOF) then
+              begin
+                  Add(tbCustomerCompany.AsString);
+                  Add(tbCustomerAddr1.AsString);
+                  Add(tbCustomerAddr2.AsString);
+                  Add(tbCustomerCity.AsString+’-’+tbCustomerState.AsString);
+                  Add(tbCustomerZip.AsString);
+              end;
+           end;
+           tbCustomer.Next;
+      end;
+  end;
+end;
+--------------------------------------------------------------
+var I, cTam, cLin : Integer;
+    vLab : TQRLabel;
+    S : string;
+begin
+    S    := F_Atend.cdsAcompHISTORIA.AsString;
+    I    := 1;
+    cLin := 1;
+    cTam := Length(S);
+    while ((cTam > 0) and (I < 4)) do
+    begin
+       vLab := TQRLabel(FindComponent('QRHist'+IntToStr(i)));
+       With vLab do
+       begin
+         Caption := Copy(S,cLin,60);
+       end;
+       cTam := cTam - 60;
+       cLin := cLin + 60;
+       I    := I + 1;
+    end;
+
+//    qrHIST1.Caption := F_Atend.cdsAcompHISTORIA.AsString;
+end;

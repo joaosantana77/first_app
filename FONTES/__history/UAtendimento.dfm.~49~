@@ -1,0 +1,789 @@
+object F_Atend: TF_Atend
+  Left = 189
+  Top = 156
+  Caption = 'Ficha de Atendimento'
+  ClientHeight = 540
+  ClientWidth = 972
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  PixelsPerInch = 96
+  TextHeight = 13
+  object GroupBox1: TGroupBox
+    Left = 24
+    Top = 16
+    Width = 940
+    Height = 65
+    Caption = 'Atendente e Paciente'
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 13
+      Top = 14
+      Width = 51
+      Height = 13
+      Caption = 'Atendente'
+    end
+    object Paciente: TLabel
+      Left = 192
+      Top = 14
+      Width = 41
+      Height = 13
+      Caption = 'Paciente'
+    end
+    object Label21: TLabel
+      Left = 503
+      Top = 14
+      Width = 28
+      Height = 13
+      Caption = 'Idade'
+    end
+    object cbAtend: TComboBox
+      Left = 13
+      Top = 31
+      Width = 132
+      Height = 21
+      TabOrder = 0
+      OnExit = cbAtendExit
+    end
+    object dblkpPessoa: TDBLookupComboBox
+      Left = 186
+      Top = 31
+      Width = 303
+      Height = 21
+      KeyField = 'IDPESSOA'
+      ListField = 'NOME'
+      ListSource = dsConsPes
+      TabOrder = 1
+      OnExit = dblkpPessoaExit
+    end
+    object butNovo: TButton
+      Left = 844
+      Top = 19
+      Width = 75
+      Height = 40
+      Action = F_Principal.actCadPacient
+      TabOrder = 2
+      OnExit = butNovoExit
+    end
+    object butAtender: TButton
+      Left = 746
+      Top = 19
+      Width = 84
+      Height = 40
+      Caption = 'Atender'
+      TabOrder = 3
+      OnClick = butAtenderClick
+    end
+    object edtIdade: TEdit
+      Left = 502
+      Top = 31
+      Width = 210
+      Height = 21
+      TabOrder = 4
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 24
+    Top = 87
+    Width = 940
+    Height = 185
+    Caption = 'Hist'#243'rico'
+    TabOrder = 1
+    object Label2: TLabel
+      Left = 366
+      Top = 36
+      Width = 36
+      Height = 13
+      Caption = 'Hist'#243'ria'
+    end
+    object Label3: TLabel
+      Left = 336
+      Top = 81
+      Width = 67
+      Height = 13
+      Caption = 'Antecedentes'
+    end
+    object Label4: TLabel
+      Left = 389
+      Top = 106
+      Width = 13
+      Height = 13
+      Caption = 'PA'
+    end
+    object Label5: TLabel
+      Left = 530
+      Top = 106
+      Width = 13
+      Height = 13
+      Caption = 'FC'
+    end
+    object Label6: TLabel
+      Left = 656
+      Top = 106
+      Width = 23
+      Height = 13
+      Caption = 'Peso'
+    end
+    object Label7: TLabel
+      Left = 816
+      Top = 106
+      Width = 29
+      Height = 13
+      Caption = 'Altura'
+    end
+    object Label8: TLabel
+      Left = 361
+      Top = 131
+      Width = 41
+      Height = 13
+      Caption = 'Conduta'
+    end
+    object Label9: TLabel
+      Left = 359
+      Top = 157
+      Width = 43
+      Height = 13
+      Caption = 'Evolu'#231#227'o'
+    end
+    object DBGrid1: TDBGrid
+      Left = 16
+      Top = 16
+      Width = 313
+      Height = 161
+      DataSource = dsAcomp
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'DATA'
+          Title.Caption = 'Data'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DIAGNOSTICO'
+          Title.Caption = 'Diagn'#243'stico'
+          Visible = True
+        end>
+    end
+    object dbAnteced: TDBEdit
+      Left = 409
+      Top = 78
+      Width = 513
+      Height = 21
+      DataField = 'ANTECEDENTES'
+      DataSource = dsAcomp
+      Enabled = False
+      TabOrder = 1
+    end
+    object dbPA: TDBEdit
+      Left = 409
+      Top = 103
+      Width = 65
+      Height = 21
+      DataField = 'PA'
+      DataSource = dsAcomp
+      Enabled = False
+      TabOrder = 2
+    end
+    object dbFC: TDBEdit
+      Left = 552
+      Top = 103
+      Width = 57
+      Height = 21
+      DataField = 'FC'
+      DataSource = dsAcomp
+      Enabled = False
+      TabOrder = 3
+    end
+    object dbPESO: TDBEdit
+      Left = 688
+      Top = 103
+      Width = 65
+      Height = 21
+      DataField = 'PESO'
+      DataSource = dsAcomp
+      Enabled = False
+      TabOrder = 4
+    end
+    object dbALT: TDBEdit
+      Left = 856
+      Top = 103
+      Width = 65
+      Height = 21
+      DataField = 'ALTURA'
+      DataSource = dsAcomp
+      Enabled = False
+      TabOrder = 5
+    end
+    object dbCOND: TDBEdit
+      Left = 408
+      Top = 128
+      Width = 513
+      Height = 21
+      DataField = 'CONDUTA'
+      DataSource = dsAcomp
+      Enabled = False
+      TabOrder = 6
+    end
+    object dbEVOL: TDBEdit
+      Left = 409
+      Top = 155
+      Width = 512
+      Height = 21
+      DataField = 'EVOLUCAO'
+      DataSource = dsAcomp
+      Enabled = False
+      TabOrder = 7
+    end
+    object Memo1: TMemo
+      Left = 408
+      Top = 16
+      Width = 513
+      Height = 57
+      Enabled = False
+      TabOrder = 8
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 24
+    Top = 287
+    Width = 940
+    Height = 195
+    Caption = 'Atendimento'
+    TabOrder = 2
+    object Label10: TLabel
+      Left = 8
+      Top = 19
+      Width = 64
+      Height = 13
+      Caption = 'Atendido em:'
+    end
+    object Label11: TLabel
+      Left = 200
+      Top = 19
+      Width = 55
+      Height = 13
+      Caption = 'Diagn'#243'stico'
+    end
+    object Label12: TLabel
+      Left = 34
+      Top = 56
+      Width = 36
+      Height = 13
+      Caption = 'Hist'#243'ria'
+    end
+    object Label13: TLabel
+      Left = 7
+      Top = 90
+      Width = 67
+      Height = 13
+      Caption = 'Antecedentes'
+    end
+    object Label14: TLabel
+      Left = 61
+      Top = 115
+      Width = 13
+      Height = 13
+      Caption = 'PA'
+    end
+    object Label15: TLabel
+      Left = 173
+      Top = 115
+      Width = 13
+      Height = 13
+      Caption = 'FC'
+    end
+    object Label16: TLabel
+      Left = 292
+      Top = 115
+      Width = 23
+      Height = 13
+      Caption = 'Peso'
+    end
+    object Label17: TLabel
+      Left = 436
+      Top = 115
+      Width = 53
+      Height = 13
+      Caption = 'Altura (cm)'
+    end
+    object Label18: TLabel
+      Left = 32
+      Top = 139
+      Width = 41
+      Height = 13
+      Caption = 'Conduta'
+    end
+    object Label19: TLabel
+      Left = 32
+      Top = 162
+      Width = 43
+      Height = 13
+      Caption = 'Evolu'#231#227'o'
+    end
+    object dtpData: TDateTimePicker
+      Left = 78
+      Top = 16
+      Width = 97
+      Height = 21
+      Date = 41415.435103993060000000
+      Time = 41415.435103993060000000
+      TabOrder = 0
+    end
+    object edtDiag: TEdit
+      Left = 261
+      Top = 16
+      Width = 660
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+    object edtAnt: TEdit
+      Left = 78
+      Top = 88
+      Width = 843
+      Height = 21
+      TabOrder = 3
+    end
+    object edtPA: TEdit
+      Left = 78
+      Top = 112
+      Width = 49
+      Height = 21
+      TabOrder = 4
+    end
+    object edtFC: TEdit
+      Left = 192
+      Top = 112
+      Width = 63
+      Height = 21
+      TabOrder = 5
+    end
+    object edtPeso: TEdit
+      Left = 328
+      Top = 112
+      Width = 33
+      Height = 21
+      NumbersOnly = True
+      TabOrder = 6
+    end
+    object edtAlt: TEdit
+      Left = 495
+      Top = 112
+      Width = 43
+      Height = 21
+      NumbersOnly = True
+      TabOrder = 7
+    end
+    object edtCond: TEdit
+      Left = 78
+      Top = 136
+      Width = 843
+      Height = 21
+      TabOrder = 8
+    end
+    object edtEvol: TEdit
+      Left = 78
+      Top = 160
+      Width = 843
+      Height = 21
+      TabOrder = 9
+    end
+    object edtHist: TMemo
+      Left = 78
+      Top = 41
+      Width = 843
+      Height = 42
+      ScrollBars = ssVertical
+      TabOrder = 2
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 488
+    Width = 972
+    Height = 52
+    Align = alBottom
+    TabOrder = 3
+    object butCancelar: TBitBtn
+      Left = 216
+      Top = 8
+      Width = 108
+      Height = 33
+      Caption = 'Cancelar'
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+        33333337777FF377FF3333993370739993333377FF373F377FF3399993000339
+        993337777F777F3377F3393999707333993337F77737333337FF993399933333
+        399377F3777FF333377F993339903333399377F33737FF33377F993333707333
+        399377F333377FF3377F993333101933399377F333777FFF377F993333000993
+        399377FF3377737FF7733993330009993933373FF3777377F7F3399933000399
+        99333773FF777F777733339993707339933333773FF7FFF77333333999999999
+        3333333777333777333333333999993333333333377777333333}
+      NumGlyphs = 2
+      TabOrder = 0
+      OnClick = butCancelarClick
+    end
+    object butGravar: TBitBtn
+      Left = 360
+      Top = 8
+      Width = 108
+      Height = 33
+      Caption = 'Gravar'
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333330070
+        7700333333337777777733333333008088003333333377F73377333333330088
+        88003333333377FFFF7733333333000000003FFFFFFF77777777000000000000
+        000077777777777777770FFFFFFF0FFFFFF07F3333337F3333370FFFFFFF0FFF
+        FFF07F3FF3FF7FFFFFF70F00F0080CCC9CC07F773773777777770FFFFFFFF039
+        99337F3FFFF3F7F777F30F0000F0F09999937F7777373777777F0FFFFFFFF999
+        99997F3FF3FFF77777770F00F000003999337F773777773777F30FFFF0FF0339
+        99337F3FF7F3733777F30F08F0F0337999337F7737F73F7777330FFFF0039999
+        93337FFFF7737777733300000033333333337777773333333333}
+      NumGlyphs = 2
+      TabOrder = 1
+      OnClick = butGravarClick
+    end
+    object butSair: TBitBtn
+      Left = 677
+      Top = 8
+      Width = 108
+      Height = 33
+      Caption = 'Sair'
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00330000000000
+        03333377777777777F333301111111110333337F333333337F33330111111111
+        0333337F333333337F333301111111110333337F333333337F33330111111111
+        0333337F333333337F333301111111110333337F333333337F33330111111111
+        0333337F3333333F7F333301111111B10333337F333333737F33330111111111
+        0333337F333333337F333301111111110333337F33FFFFF37F3333011EEEEE11
+        0333337F377777F37F3333011EEEEE110333337F37FFF7F37F3333011EEEEE11
+        0333337F377777337F333301111111110333337F333333337F33330111111111
+        0333337FFFFFFFFF7F3333000000000003333377777777777333}
+      NumGlyphs = 2
+      TabOrder = 2
+      OnClick = butSairClick
+    end
+    object butImprimir: TBitBtn
+      Left = 511
+      Top = 8
+      Width = 113
+      Height = 33
+      Caption = 'Imprimir'
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+        8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+        8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+        8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+        03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+        03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+        33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+        33333337FFFF7733333333300000033333333337777773333333}
+      NumGlyphs = 2
+      TabOrder = 3
+      OnClick = butImprimirClick
+    end
+  end
+  object sqlConsPes: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'SELECT IDPESSOA, NOME, NASCIMENTO'
+      '  FROM PESSOAS ORDER BY NOME')
+    SQLConnection = DM.MEUSPACIENTES
+    Left = 744
+    Top = 88
+  end
+  object dspConsPes: TDataSetProvider
+    DataSet = sqlConsPes
+    Left = 792
+    Top = 88
+  end
+  object cdsConsPes: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspConsPes'
+    Left = 840
+    Top = 88
+    object cdsConsPesIDPESSOA: TIntegerField
+      FieldName = 'IDPESSOA'
+      Required = True
+    end
+    object cdsConsPesNOME: TStringField
+      FieldName = 'NOME'
+      Size = 60
+    end
+    object cdsConsPesNASCIMENTO: TDateField
+      FieldName = 'NASCIMENTO'
+    end
+  end
+  object sqlAcomp: TSQLDataSet
+    SchemaName = 'sysdba'
+    CommandText = 'select * from ACOMPANHAMENTO'
+    MaxBlobSize = 1
+    Params = <>
+    SQLConnection = DM.MEUSPACIENTES
+    Left = 432
+    Top = 264
+  end
+  object dspAcomp: TDataSetProvider
+    DataSet = sqlAcomp
+    Left = 488
+    Top = 264
+  end
+  object cdsAcomp: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspAcomp'
+    BeforePost = cdsAcompBeforePost
+    Left = 576
+    Top = 264
+    object cdsAcompIDACOMP: TIntegerField
+      FieldName = 'IDACOMP'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object cdsAcompIDPESSOA: TIntegerField
+      FieldName = 'IDPESSOA'
+    end
+    object cdsAcompIDATENDENTE: TIntegerField
+      FieldName = 'IDATENDENTE'
+    end
+    object cdsAcompDATA: TDateField
+      FieldName = 'DATA'
+    end
+    object cdsAcompDIAGNOSTICO: TStringField
+      FieldName = 'DIAGNOSTICO'
+      Size = 150
+    end
+    object cdsAcompHISTORIA: TStringField
+      FieldName = 'HISTORIA'
+      Size = 500
+    end
+    object cdsAcompANTECEDENTES: TStringField
+      FieldName = 'ANTECEDENTES'
+      Size = 200
+    end
+    object cdsAcompPA: TStringField
+      FieldName = 'PA'
+      Size = 10
+    end
+    object cdsAcompFC: TStringField
+      FieldName = 'FC'
+      FixedChar = True
+      Size = 10
+    end
+    object cdsAcompPESO: TStringField
+      FieldName = 'PESO'
+      FixedChar = True
+      Size = 10
+    end
+    object cdsAcompALTURA: TStringField
+      FieldName = 'ALTURA'
+      FixedChar = True
+      Size = 10
+    end
+    object cdsAcompCONDUTA: TStringField
+      FieldName = 'CONDUTA'
+      Size = 100
+    end
+    object cdsAcompEVOLUCAO: TStringField
+      FieldName = 'EVOLUCAO'
+      Size = 100
+    end
+  end
+  object dsAcomp: TDataSource
+    DataSet = cdsAcomp
+    OnDataChange = dsAcompDataChange
+    Left = 624
+    Top = 264
+  end
+  object dsConsPes: TDataSource
+    DataSet = cdsConsPes
+    Left = 896
+    Top = 88
+  end
+  object spACOMP_IU: TSQLStoredProc
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftInteger
+        Precision = 4
+        Name = 'IDACOMP'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Precision = 4
+        Name = 'IDPESSOA'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Precision = 4
+        Name = 'IDATENDENTE'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftDate
+        Precision = 4
+        Name = 'DATA'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Precision = 150
+        Name = 'DIAGNOSTICO'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Precision = 300
+        Name = 'HISTORIA'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Precision = 200
+        Name = 'ANTECEDENTES'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Precision = 10
+        Name = 'PA'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFixedChar
+        Precision = 10
+        Name = 'FC'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFixedChar
+        Precision = 10
+        Name = 'PESO'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFixedChar
+        Precision = 10
+        Name = 'ALTURA'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Precision = 100
+        Name = 'CONDUTA'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Precision = 100
+        Name = 'EVOLUCAO'
+        ParamType = ptInput
+      end>
+    SQLConnection = DM.MEUSPACIENTES
+    StoredProcName = 'ACOMPANHAMENTO_IU'
+    Left = 664
+    Top = 264
+  end
+  object cdsTMP: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 320
+    Top = 263
+    object cdsTMPIDACOMP: TIntegerField
+      FieldName = 'IDACOMP'
+    end
+    object cdsTMPIDPESSOA: TIntegerField
+      FieldName = 'IDPESSOA'
+    end
+    object cdsTMPIDATENDENTE: TIntegerField
+      FieldName = 'IDATENDENTE'
+    end
+    object cdsTMPDATA: TDateField
+      FieldName = 'DATA'
+    end
+    object cdsTMPDIAGNOSTICO: TStringField
+      FieldName = 'DIAGNOSTICO'
+      Size = 150
+    end
+    object cdsTMPHISTORIA: TMemoField
+      FieldName = 'HISTORIA'
+      BlobType = ftMemo
+    end
+    object cdsTMPANTECEDENTES: TMemoField
+      FieldName = 'ANTECEDENTES'
+      BlobType = ftMemo
+    end
+    object cdsTMPPA: TStringField
+      FieldName = 'PA'
+      Size = 10
+    end
+    object cdsTMPFC: TStringField
+      FieldName = 'FC'
+      Size = 10
+    end
+    object cdsTMPPESO: TStringField
+      FieldName = 'PESO'
+      Size = 10
+    end
+    object cdsTMPALTURA: TStringField
+      FieldName = 'ALTURA'
+      Size = 10
+    end
+    object cdsTMPCONDUTA: TMemoField
+      FieldName = 'CONDUTA'
+      BlobType = ftMemo
+      Size = 100
+    end
+    object cdsTMPEVOLUCAO: TMemoField
+      FieldName = 'EVOLUCAO'
+      BlobType = ftMemo
+    end
+    object cdsTMPIDADE: TIntegerField
+      FieldName = 'IDADE'
+    end
+  end
+  object dsTMP: TDataSource
+    DataSet = cdsTMP
+    Left = 376
+    Top = 264
+  end
+end

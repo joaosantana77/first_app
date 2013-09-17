@@ -1,0 +1,92 @@
+unit UQrFicha;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, QRCtrls, jpeg, QuickRpt, ExtCtrls;
+
+type
+  TF_QRFicha = class(TForm)
+    QuickRep1: TQuickRep;
+    PageFooterBand1: TQRBand;
+    PageHeaderBand1: TQRBand;
+    TitleBand1: TQRBand;
+    QRImage1: TQRImage;
+    QRSysData1: TQRSysData;
+    QRLabel2: TQRLabel;
+    QRDBText1: TQRDBText;
+    QRLabel3: TQRLabel;
+    QRDBText2: TQRDBText;
+    QRLabel4: TQRLabel;
+    QRDBText3: TQRDBText;
+    QRLabel5: TQRLabel;
+    QRDBText4: TQRDBText;
+    QRLabel6: TQRLabel;
+    QRDBText5: TQRDBText;
+    QRLabel7: TQRLabel;
+    QRDBText6: TQRDBText;
+    QRLabel8: TQRLabel;
+    QRDBText7: TQRDBText;
+    QRLabel9: TQRLabel;
+    QRDBText8: TQRDBText;
+    QRLabel10: TQRLabel;
+    QRDBText9: TQRDBText;
+    QRLabel11: TQRLabel;
+    QRDBText10: TQRDBText;
+    QRLabel12: TQRLabel;
+    QRDBText11: TQRDBText;
+    QRLabel13: TQRLabel;
+    QRDBText12: TQRDBText;
+    QRLabel14: TQRLabel;
+    QRDBText13: TQRDBText;
+    QRLabel16: TQRLabel;
+    QRDBText14: TQRDBText;
+    QRLabel17: TQRLabel;
+    QRDBText15: TQRDBText;
+    QRLabel15: TQRLabel;
+    QRLabel18: TQRLabel;
+    QRLabel19: TQRLabel;
+    QRDBText16: TQRDBText;
+    QRDBText17: TQRDBText;
+    QRLabel20: TQRLabel;
+    QRLabel21: TQRLabel;
+    QRDBText19: TQRDBText;
+    QRLabel22: TQRLabel;
+    QRDBText21: TQRDBText;
+    QRLabel23: TQRLabel;
+    QRDBText20: TQRDBText;
+    QRLabel24: TQRLabel;
+    QRDBText22: TQRDBText;
+    QRDBText24: TQRDBText;
+    QRLabel25: TQRLabel;
+    QRLabel26: TQRLabel;
+    QRDBText23: TQRDBText;
+    QRLabel1: TQRLabel;
+    procedure DetailBand1BeforePrint(Sender: TQRCustomBand;
+      var PrintBand: Boolean);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  F_QRFicha: TF_QRFicha;
+
+implementation
+
+uses UDM, UAtendimento;
+
+{$R *.dfm}
+
+procedure TF_QRFicha.DetailBand1BeforePrint(Sender: TQRCustomBand;
+  var PrintBand: Boolean);
+var vM : String;
+begin
+   //QRMemo1.Lines.Text := F_Atend.cdsAcompHISTORIA.AsString;
+   vM :=  F_Atend.cdsAcompHISTORIA.AsString;
+  // QRL1.Caption := 'tESTE';
+end;
+
+end.

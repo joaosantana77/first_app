@@ -1,0 +1,22 @@
+var Dados: TSHFileOpStruct;
+    Origem, Destino, DirName : string;
+begin
+  GetDir(0,DirName);
+  Origem := copy(DirName,1,2)+'\MeusPacientes\*.*';
+//  showmessage('Origem: '+origem);
+  Destino := edtLetra.Text+':'+'\MeusPacientes\';
+  if edtLetra.Text <> '' then
+  begin
+    FillChar(Dados,SizeOf(Dados), 0);
+    with Dados do
+    begin
+      wFunc := FO_COPY;
+      pFrom := PChar(Origem);
+      pTo   := PChar(Destino);
+      fFlags:= FOF_ALLOWUNDO;
+    end;
+    SHFileOperation(Dados);
+    showmessage('Copia concluida! ');
+  end;
+  gbBackup.Visible := False;
+end;

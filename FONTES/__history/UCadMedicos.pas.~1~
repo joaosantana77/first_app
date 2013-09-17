@@ -1,0 +1,25 @@
+unit UCadMedicos;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ufrmCadPadrao, DB, ExtCtrls, DBCtrls, Grids, DBGrids, StdCtrls,
+  Buttons, ComCtrls;
+
+type
+  TF_CadMed = class(TfrmCadastro)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  F_CadMed: TF_CadMed;
+
+implementation
+
+{$R *.dfm}
+
+end.

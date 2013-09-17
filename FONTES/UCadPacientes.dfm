@@ -1,0 +1,434 @@
+inherited F_CadPacientes: TF_CadPacientes
+  Left = 249
+  Top = 148
+  Caption = 'Cadastro de Pacientes'
+  ClientHeight = 542
+  ClientWidth = 867
+  OnCreate = FormCreate
+  ExplicitLeft = 249
+  ExplicitTop = 148
+  ExplicitWidth = 883
+  ExplicitHeight = 580
+  PixelsPerInch = 96
+  TextHeight = 15
+  object Label1: TLabel [0]
+    Left = 24
+    Top = 11
+    Width = 38
+    Height = 15
+    Caption = 'Codigo'
+    FocusControl = DBEdit1
+  end
+  inherited StatusBar1: TStatusBar
+    Top = 523
+    Width = 867
+    ExplicitTop = 523
+    ExplicitWidth = 867
+  end
+  inherited GroupBox1: TGroupBox
+    Top = 468
+    Width = 867
+    ExplicitTop = 468
+    ExplicitWidth = 867
+  end
+  inherited DBGrid1: TDBGrid
+    Top = 308
+    Width = 867
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'IDPESSOA'
+        Title.Caption = 'Codigo'
+        Width = 45
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TIPO'
+        Title.Caption = 'Tipo'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'FONE'
+        Width = 120
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME'
+        Width = 250
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ENDERECO'
+        Width = 250
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'BAIRRO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CIDADE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'UF'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CPF'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'RG'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'EMISSAORG'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NASCIMENTO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NATURALIDADE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PROFISSAO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FILIACAO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'SEXO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CONVENIO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ALTURA'
+        Visible = True
+      end>
+  end
+  inherited DBNavigator1: TDBNavigator
+    Left = 586
+    Hints.Strings = ()
+    ExplicitLeft = 586
+  end
+  object DBEdit1: TDBEdit [5]
+    Left = 83
+    Top = 8
+    Width = 46
+    Height = 23
+    DataField = 'IDPESSOA'
+    DataSource = DataSource1
+    TabOrder = 4
+  end
+  object GroupBox2: TGroupBox [6]
+    Left = 8
+    Top = 39
+    Width = 833
+    Height = 145
+    Caption = 'Dados Pessoais'
+    TabOrder = 5
+    object Label2: TLabel
+      Left = 16
+      Top = 24
+      Width = 31
+      Height = 15
+      Caption = 'Nome'
+      FocusControl = DBEdit2
+    end
+    object Label3: TLabel
+      Left = 375
+      Top = 24
+      Width = 20
+      Height = 15
+      Caption = 'CPF'
+      FocusControl = DBEdit3
+    end
+    object Label4: TLabel
+      Left = 514
+      Top = 24
+      Width = 15
+      Height = 15
+      Caption = 'RG'
+      FocusControl = DBEdit4
+    end
+    object Label5: TLabel
+      Left = 656
+      Top = 24
+      Width = 64
+      Height = 15
+      Caption = 'Dt. Emiss'#227'o'
+      FocusControl = DBEdit5
+    end
+    object Label6: TLabel
+      Left = 16
+      Top = 50
+      Width = 23
+      Height = 15
+      Caption = 'End.'
+      FocusControl = DBEdit6
+    end
+    object Label7: TLabel
+      Left = 16
+      Top = 82
+      Width = 35
+      Height = 15
+      Caption = 'Bairro'
+      FocusControl = DBEdit7
+    end
+    object Label8: TLabel
+      Left = 276
+      Top = 82
+      Width = 38
+      Height = 15
+      Caption = 'Cidade'
+      FocusControl = DBEdit8
+    end
+    object Label9: TLabel
+      Left = 644
+      Top = 82
+      Width = 14
+      Height = 15
+      Caption = 'UF'
+      FocusControl = DBEdit9
+    end
+    object Label10: TLabel
+      Left = 16
+      Top = 111
+      Width = 30
+      Height = 15
+      Caption = 'Nasc.'
+      FocusControl = DBEdit10
+    end
+    object Label11: TLabel
+      Left = 161
+      Top = 111
+      Width = 73
+      Height = 15
+      Caption = 'Naturalidade'
+      FocusControl = DBEdit11
+    end
+    object Label12: TLabel
+      Left = 486
+      Top = 112
+      Width = 52
+      Height = 15
+      Caption = 'Profiss'#227'o'
+      FocusControl = DBEdit12
+    end
+    object Label15: TLabel
+      Left = 727
+      Top = 82
+      Width = 25
+      Height = 15
+      Caption = 'Sexo'
+    end
+    object DBEdit2: TDBEdit
+      Left = 56
+      Top = 21
+      Width = 313
+      Height = 23
+      CharCase = ecUpperCase
+      DataField = 'NOME'
+      DataSource = DataSource1
+      TabOrder = 0
+    end
+    object DBEdit3: TDBEdit
+      Left = 402
+      Top = 21
+      Width = 103
+      Height = 23
+      DataField = 'CPF'
+      DataSource = DataSource1
+      TabOrder = 1
+    end
+    object DBEdit4: TDBEdit
+      Left = 535
+      Top = 21
+      Width = 114
+      Height = 23
+      DataField = 'RG'
+      DataSource = DataSource1
+      TabOrder = 2
+    end
+    object DBEdit5: TDBEdit
+      Left = 721
+      Top = 21
+      Width = 81
+      Height = 23
+      DataField = 'EMISSAORG'
+      DataSource = DataSource1
+      TabOrder = 3
+    end
+    object DBEdit6: TDBEdit
+      Left = 56
+      Top = 50
+      Width = 746
+      Height = 23
+      DataField = 'ENDERECO'
+      DataSource = DataSource1
+      TabOrder = 4
+    end
+    object DBEdit7: TDBEdit
+      Left = 57
+      Top = 79
+      Width = 201
+      Height = 23
+      DataField = 'BAIRRO'
+      DataSource = DataSource1
+      TabOrder = 5
+    end
+    object DBEdit8: TDBEdit
+      Left = 320
+      Top = 79
+      Width = 281
+      Height = 23
+      DataField = 'CIDADE'
+      DataSource = DataSource1
+      TabOrder = 6
+    end
+    object DBEdit9: TDBEdit
+      Left = 664
+      Top = 79
+      Width = 34
+      Height = 23
+      DataField = 'UF'
+      DataSource = DataSource1
+      TabOrder = 7
+    end
+    object DBEdit10: TDBEdit
+      Left = 57
+      Top = 108
+      Width = 88
+      Height = 23
+      DataField = 'NASCIMENTO'
+      DataSource = DataSource1
+      TabOrder = 9
+    end
+    object DBEdit11: TDBEdit
+      Left = 240
+      Top = 108
+      Width = 233
+      Height = 23
+      DataField = 'NATURALIDADE'
+      DataSource = DataSource1
+      TabOrder = 10
+    end
+    object DBEdit12: TDBEdit
+      Left = 544
+      Top = 108
+      Width = 258
+      Height = 23
+      DataField = 'PROFISSAO'
+      DataSource = DataSource1
+      TabOrder = 11
+    end
+    object DBCbSexo: TDBComboBox
+      Left = 761
+      Top = 79
+      Width = 41
+      Height = 23
+      CharCase = ecUpperCase
+      DataField = 'SEXO'
+      DataSource = DataSource1
+      Items.Strings = (
+        'F'
+        'M')
+      TabOrder = 8
+    end
+  end
+  object GroupBox3: TGroupBox [7]
+    Left = 8
+    Top = 192
+    Width = 833
+    Height = 81
+    Caption = 'Outras Informa'#231#245'es'
+    TabOrder = 6
+    object Label13: TLabel
+      Left = 16
+      Top = 19
+      Width = 45
+      Height = 15
+      Caption = 'Filia'#231#227'o'
+      FocusControl = DBEdit13
+    end
+    object Label14: TLabel
+      Left = 16
+      Top = 48
+      Width = 51
+      Height = 15
+      Caption = 'Conv'#234'nio'
+      FocusControl = DBEdit14
+    end
+    object Label16: TLabel
+      Left = 489
+      Top = 48
+      Width = 65
+      Height = 15
+      Caption = 'Estado Civil'
+    end
+    object DBEdit13: TDBEdit
+      Left = 80
+      Top = 16
+      Width = 722
+      Height = 23
+      DataField = 'FILIACAO'
+      DataSource = DataSource1
+      TabOrder = 0
+    end
+    object DBEdit14: TDBEdit
+      Left = 80
+      Top = 45
+      Width = 264
+      Height = 23
+      CharCase = ecUpperCase
+      DataField = 'CONVENIO'
+      DataSource = DataSource1
+      TabOrder = 1
+    end
+    object DBCbEstCiv: TDBComboBox
+      Left = 576
+      Top = 45
+      Width = 226
+      Height = 23
+      DataField = 'ESTADOCIVIL'
+      DataSource = DataSource1
+      Items.Strings = (
+        'Solteiro(a)'
+        'Casado(a)'
+        'Divorciado(a)'
+        'Vi'#250'vo(a)')
+      TabOrder = 2
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = DM.cdsCadPes
+    Left = 424
+    Top = 8
+  end
+end

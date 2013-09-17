@@ -1,0 +1,171 @@
+object DMFR: TDMFR
+  OldCreateOrder = False
+  Height = 242
+  Width = 380
+  object frxReport1: TfrxReport
+    Version = '4.12.13'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 41518.878693506900000000
+    ReportOptions.LastChange = 41519.480827627320000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 48
+    Top = 32
+    Datasets = <
+      item
+        DataSet = frxCadPes
+        DataSetName = 'frxCadPes'
+      end
+      item
+        DataSet = frxAtendimento
+        DataSetName = 'frxAtendimento'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 215.900000000000000000
+      PaperHeight = 279.400000000000000000
+      PaperSize = 1
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      object ReportTitle1: TfrxReportTitle
+        Height = 105.826840000000000000
+        Top = 18.897650000000000000
+        Width = 740.409927000000000000
+        object Memo1: TfrxMemoView
+          Align = baCenter
+          Left = 294.614363500000000000
+          Top = 79.370130000000000000
+          Width = 151.181200000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          AutoWidth = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Arial'
+          Font.Style = [fsBold, fsItalic, fsUnderline]
+          Memo.UTF8W = (
+            'Ficha Clinica')
+          ParentFont = False
+        end
+        object Picture1: TfrxPictureView
+          Left = 18.897650000000000000
+          Top = 15.118120000000000000
+          Width = 94.488250000000000000
+          Height = 52.913420000000000000
+          ShowHint = False
+          HightQuality = False
+          Transparent = False
+          TransparentColor = clWhite
+        end
+      end
+      object PageHeader1: TfrxPageHeader
+        Height = 68.031540000000000000
+        Top = 147.401670000000000000
+        Width = 740.409927000000000000
+        object Memo2: TfrxMemoView
+          Left = 7.559060000000000000
+          Top = 3.779529999999994000
+          Width = 49.133890000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.UTF8W = (
+            'Nome:')
+          ParentFont = False
+        end
+        object frxCadPesNOME: TfrxMemoView
+          Left = 64.252010000000000000
+          Top = 3.779529999999994000
+          Width = 355.275820000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          DataField = 'NOME'
+          DataSet = frxCadPes
+          DataSetName = 'frxCadPes'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.UTF8W = (
+            '[frxCadPes."NOME"]')
+          ParentFont = False
+        end
+      end
+    end
+  end
+  object frxAtendimento: TfrxDBDataset
+    UserName = 'frxAtendimento'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      'IDPESSOA=IDPESSOA'
+      'NOME=NOME'
+      'ENDERECO=ENDERECO'
+      'BAIRRO=BAIRRO'
+      'CIDADE=CIDADE'
+      'FONE=FONE'
+      'UF=UF'
+      'CPF=CPF'
+      'RG=RG'
+      'EMISSAORG=EMISSAORG'
+      'NASCIMENTO=NASCIMENTO'
+      'NATURALIDADE=NATURALIDADE'
+      'PROFISSAO=PROFISSAO'
+      'FILIACAO=FILIACAO'
+      'SEXO=SEXO'
+      'CONVENIO=CONVENIO'
+      'ALTURA=ALTURA'
+      'ESTADOCIVIL=ESTADOCIVIL')
+    DataSet = DM.cdsPesAtd
+    BCDToCurrency = False
+    Left = 144
+    Top = 32
+  end
+  object frxCadPes: TfrxDBDataset
+    UserName = 'frxCadPes'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      'IDPESSOA=IDPESSOA'
+      'NOME=NOME'
+      'ENDERECO=ENDERECO'
+      'BAIRRO=BAIRRO'
+      'CIDADE=CIDADE'
+      'FONE=FONE'
+      'UF=UF'
+      'CPF=CPF'
+      'RG=RG'
+      'EMISSAORG=EMISSAORG'
+      'NASCIMENTO=NASCIMENTO'
+      'NATURALIDADE=NATURALIDADE'
+      'PROFISSAO=PROFISSAO'
+      'FILIACAO=FILIACAO'
+      'SEXO=SEXO'
+      'CONVENIO=CONVENIO'
+      'ALTURA=ALTURA'
+      'ESTADOCIVIL=ESTADOCIVIL')
+    DataSet = DM.cdsCadPes
+    BCDToCurrency = False
+    Left = 144
+    Top = 88
+  end
+end

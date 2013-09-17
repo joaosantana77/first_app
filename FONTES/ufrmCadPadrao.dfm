@@ -1,0 +1,262 @@
+object frmCadastro: TfrmCadastro
+  Left = 304
+  Top = 186
+  Caption = 'Cadastro Padr'#227'o'
+  ClientHeight = 399
+  ClientWidth = 720
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Calibri'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 15
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 380
+    Width = 720
+    Height = 19
+    AutoHint = True
+    Panels = <
+      item
+        Width = 50
+      end
+      item
+        Width = 50
+      end>
+    ParentShowHint = False
+    ShowHint = True
+    SimplePanel = True
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Top = 325
+    Width = 720
+    Height = 55
+    Align = alBottom
+    TabOrder = 1
+    object btnNovo: TBitBtn
+      Left = 8
+      Top = 13
+      Width = 80
+      Height = 33
+      Hint = 'Novo Registro'
+      Caption = '&Novo'
+      DoubleBuffered = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Calibri'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF0033333333B333
+        333B33FF33337F3333F73BB3777BB7777BB3377FFFF77FFFF77333B000000000
+        0B3333777777777777333330FFFFFFFF07333337F33333337F333330FFFFFFFF
+        07333337F33333337F333330FFFFFFFF07333337F33333337F333330FFFFFFFF
+        07333FF7F33333337FFFBBB0FFFFFFFF0BB37777F3333333777F3BB0FFFFFFFF
+        0BBB3777F3333FFF77773330FFFF000003333337F333777773333330FFFF0FF0
+        33333337F3337F37F3333330FFFF0F0B33333337F3337F77FF333330FFFF003B
+        B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
+        3BB33773333773333773B333333B3333333B7333333733333337}
+      NumGlyphs = 2
+      ParentDoubleBuffered = False
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnNovoClick
+    end
+    object btnExcluir: TBitBtn
+      Left = 272
+      Top = 13
+      Width = 80
+      Height = 33
+      Hint = 'Excluir Registro'
+      Caption = '&Excluir'
+      DoubleBuffered = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Calibri'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+        55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
+        305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
+        005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
+        B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
+        B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
+        B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
+        B0557777FF577777F7F500000E055550805577777F7555575755500000555555
+        05555777775555557F5555000555555505555577755555557555}
+      NumGlyphs = 2
+      ParentDoubleBuffered = False
+      ParentFont = False
+      TabOrder = 1
+      OnClick = btnExcluirClick
+    end
+    object btnGravar: TBitBtn
+      Left = 100
+      Top = 13
+      Width = 80
+      Height = 33
+      Hint = 'Gravar Novo/Altera'#231#227'o'
+      Caption = '&Gravar'
+      DoubleBuffered = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Calibri'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+        00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+        00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+        00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+        00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+        00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+        00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+        0003737FFFFFFFFF7F7330099999999900333777777777777733}
+      NumGlyphs = 2
+      ParentDoubleBuffered = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 2
+      OnClick = btnGravarClick
+    end
+    object btnCancelar: TBitBtn
+      Left = 186
+      Top = 13
+      Width = 80
+      Height = 33
+      Hint = 'Cancelar Novo/Altera'#231#227'o'
+      Caption = '&Cancelar'
+      DoubleBuffered = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Calibri'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+        3333333777333777FF3333993333339993333377FF3333377FF3399993333339
+        993337777FF3333377F3393999333333993337F777FF333337FF993399933333
+        399377F3777FF333377F993339993333399377F33777FF33377F993333999333
+        399377F333777FF3377F993333399933399377F3333777FF377F993333339993
+        399377FF3333777FF7733993333339993933373FF3333777F7F3399933333399
+        99333773FF3333777733339993333339933333773FFFFFF77333333999999999
+        3333333777333777333333333999993333333333377777333333}
+      NumGlyphs = 2
+      ParentDoubleBuffered = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+      OnClick = btnCancelarClick
+    end
+    object btnEditar: TBitBtn
+      Left = 360
+      Top = 13
+      Width = 80
+      Height = 33
+      Hint = 'Alterar Registro'
+      Caption = '&Alterar'
+      DoubleBuffered = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Calibri'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+        000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+        00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+        F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+        0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+        FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+        FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+        0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+        00333377737FFFFF773333303300000003333337337777777333}
+      NumGlyphs = 2
+      ParentDoubleBuffered = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+      OnClick = btnEditarClick
+    end
+    object btnSair: TBitBtn
+      Left = 586
+      Top = 13
+      Width = 80
+      Height = 33
+      Hint = 'Sair '
+      Caption = '&Sair'
+      DoubleBuffered = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Calibri'
+      Font.Style = [fsBold]
+      Kind = bkClose
+      ParentDoubleBuffered = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+      OnClick = btnSairClick
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 165
+    Width = 720
+    Height = 160
+    Align = alBottom
+    DataSource = DataSource1
+    TabOrder = 2
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -13
+    TitleFont.Name = 'Calibri'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 432
+    Top = 8
+    Width = 224
+    Height = 25
+    DataSource = DataSource1
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    TabOrder = 3
+  end
+  object DataSource1: TDataSource
+    OnStateChange = DataSource1StateChange
+    Left = 640
+    Top = 96
+  end
+end
